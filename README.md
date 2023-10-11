@@ -1,5 +1,5 @@
 # STARTUP2-repro-in-k8s
-### creates a replica set in a namespace and one extra mongod node (the pod created by "deploy-04s.yaml") that will have prolonged STARTUP2 when added by means of having only 10 milli CPUs
+### creates a replica set `rs` in a namespace and one extra mongod node (the pod created by "deploy-04s.yaml") that will have prolonged STARTUP2 when added to `rs` by means of having only 10 milli CPUs
 
 let 
 
