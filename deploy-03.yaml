@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-03
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongo-03
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: mongo-03
+    spec:
+      containers:
+      - image: mongo:5.0.21
+        name: mongo
+        args: ["--dbpath","/data/db", "--config", "/mnt/mongod.conf"]
+#        args: ["--dbpath","/data/db"]
+        volumeMounts:
+        - mountPath: /mnt/mongod.conf
+          name: vmongod-01-conf
+          subPath: mongod.conf
+      volumes:
+      - name: vmongod-01-conf
+        configMap:
+          name: mongod-01-conf
+          items:
+          - key: key1
+            path: mongod.conf
