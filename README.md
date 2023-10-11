@@ -8,9 +8,7 @@ let
 
 create the conditions where you can add the slow node (= the pod created by "deploy-04s.yaml")
 
-if there is enough sample data the slow node will be in STARTUP2 for long enough to test election behavior.
-
-# add a new node, it will be slow
+if there is enough sample data the slow node, once added, will be in STARTUP2 for long enough to test election behavior:
 
 # experiment 1:
 ```
