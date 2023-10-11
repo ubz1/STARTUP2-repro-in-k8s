@@ -3,7 +3,7 @@
 let 
 
 ```
-run.sh
+./run.sh
 ```
 
 create the conditions where you can add the slow node (= the pod of deploy-04s)
