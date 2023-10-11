@@ -6,7 +6,7 @@ let
 ./run.sh
 ```
 
-create the conditions where you can add the slow node (= the pod of deploy-04s)
+create the conditions where you can add the slow node (= the pod created by "deploy-04s.yaml")
 
 if there is enough sample data the slow node will be in STARTUP2 for long enough to test election behavior.
 
@@ -20,3 +20,4 @@ e.members[2].votes=1
 e.members[2].priority=1
 rs.reconfig(e,{force:1})
 ```
+then delete the 2 secondaries
